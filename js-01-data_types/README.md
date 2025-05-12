@@ -8,7 +8,7 @@ Aprender cómo se almacenan los datos en la memoria y cómo manipular los difere
 - Explicar los principales tipos de datos en JavaScript: string, boolean, number, array, object, undefined y null.
 - Explicar las variables.
 - Declarar variables con nombres significativos.
-- Explicar la conversión implícita y explícita(type casting),
+-
 - Convertir una variable en un tipo number.
 - Convertir una variable en un tipo string.
 - Convertir una variable en un tipo boolean.
