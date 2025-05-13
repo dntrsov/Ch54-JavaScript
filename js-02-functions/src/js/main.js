@@ -48,7 +48,6 @@ o funciones se eleven al comienzo de su ámbito antes de que se ejecute el códi
 
 
 
-
 /*
  ------------ Funciones expresadas -----------------------
             (function expressions)
@@ -57,11 +56,67 @@ Estas funciones pueden ser anónimas ( no tienen nombre ).
 Las funciones expresadas no tiene hoisting, porque no se
 carga en memoria hasta que se utilice.
 
+
 sintaxis:
     const nombreVariable = function nombreFuncion (parámetros){
         instrucciones;
     };
 */
+
+const darReagalo = function ( nombre, regalo ){
+console.log(`Felicidades ${nombre}, te traje ${regalo}`);
+}; // estamos declarando una variable
+darReagalo( "Jen", "Sopa Maruchan con camarón");
+
+/*
+ Realizar una función declarada que sume dos números 
+ y retorne el resultado.
+ 
+ Realizar una función expresada que reste dos números 
+ y retorne el resultado.
+ 
+*/
+// Función declarada para sumar dos números`deben tener RETURN
+sumarNumeros(26, 5); 
+
+function sumarNumeros(numero1, numero2) {
+  const resultado = numero1 + numero2;
+  console.log(`La suma de los dos números es:  ${resultado}`);
+}
+
+// Función expresada para restar dos números
+const restarNumeros = function(numero1, numero2) {
+  const resultado = numero1 - numero2;
+  console.log(`La resta de los dos números es: ${resultado}`);
+};
+restarNumeros(26, 5);
+
+/*
+Ejemplo Abizaic
+function sumar(a, b) {
+  return a + b;
+}
+const restar = function(a, b) {
+  return a - b;
+};
+let a ;
+let b ;
+a = Number(prompt("Ingrese el primer número"));
+b = Number(prompt("Ingrese el segundo número"));
+console.log(`Suma ${a} + ${b} = ${sumar(a, b)}`);
+console.log(`Resta ${a} - ${b} = ${restar(a, b)}`);
+*/
+
+/*
+ Ejemplo Gustavo
+function suma(a, b) {
+  return a + b;
+}
+const resta = function(a, b) {
+  return a - b;
+};
+*/
+
 
 
 
