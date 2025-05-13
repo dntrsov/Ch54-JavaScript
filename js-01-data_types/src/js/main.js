@@ -47,8 +47,17 @@ let valor2 = 4;
 console.log("El resultado de " + valor1 + " * " + valor2 + " = " + valor1 * valor2 + " pesos.");
 console.log(`El resultado de ${valor1} * ${valor2} = ${valor1*valor2} pesos.`);
 
-/*
- Tipos de datos number.
+
+/*Crear una variable con el nombre de la persona que cumple años.
+Crear una variable con el regalo que le daras*/
+
+let nombreCumpleañero = "Jenipher";
+let regalo = "un libro de Harry Potter";
+console.log(`¡Feliz cumpleaños, ${nombreCumpleañero}! Te regalo ${regalo}.`);
+
+
+
+ /*Tipos de datos number.
 
  - números positivos: 100, 1, 0.258
  - números negativos: -1 , -50.35
@@ -68,6 +77,11 @@ console.log( typeof ( 3 + "Viernes temático" ) ); // 'string'
 console.log( typeof ( "3Viernes temático" ) ); // 'string'
 console.log( 4 / 0 ); // +Infinity
 
+
+const num1 =42;
+console.log(typeof num1 === "number");
+const nameCh54 ="Luis";
+console.log(typeof nameCh54 === "string");
 
 /*
  Cuando se realizan operaciones que exceden los límites
@@ -157,16 +171,16 @@ console.log( typeof myName ); // 'undefined'
    Conversion explícita de datos (coerción de tipo)
 
  */
-const edadMascota = 10;
+const edadMascota = 10; //number
 // conversión explícita a String ============================================
 const edadMascotaString = String( edadMascota );
 console.log(`Mi mascota tiene ${ edadMascotaString } años`);
 console.log(`Mi mascota tiene ${ edadMascota } años`);
 console.log( String( true ) ); // "true"
-console.log( String( null ) ); // 
+console.log( String( null ) ); // "null"
 console.log( String( undefined ) ); // "undefined"
-console.log( String( [] ) ); // empty Array-> ""
-console.log( String( [2,3,4,5,null,3] ) ); // "2,3,4,5,,3"
+console.log( String( [] ) ); // empty string-> ""
+console.log( String( [2,3,4,5,null,3] ) ); // "2,3,4,5,,3 array a string"
 console.log( String( {} ) ); // [object Object]
 console.log( String( {name:"Serch", active:true} ) ); // [object Object]
 // Para lo objetos se recomienda usar el métod JSON.stringyfy( object )
