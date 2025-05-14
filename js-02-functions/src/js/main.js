@@ -131,9 +131,12 @@ sintaxis:
    ( function (parámetros ){} )( argumentos );
 
 */
+/*(function setUp(){
+  console.log("Configuración inicial de la aplicación");
+  console.log(`valor de data ${data}`)
+})(18); // estos () ejecutan la función, nos ahorramas setUp(); */ // revisar función 
 
-
-
+/*setUp(); //para que se ejecutte la app 
 
 
 /*
@@ -143,6 +146,7 @@ Funciones similares a las funciones expresadas pero:
  - No requiere la palabra reservada function
  - Si tiene una solo instrucción no requiere las llaves {}
  - Si la instrucción es el mismo retorno, no requiere la palabra return
+ Similares a las f(declaradas)
 
 sintaxis:
     const nombreVariable = (parametros) => instrucción;
@@ -152,7 +156,67 @@ sintaxis:
         return expresión;
     }
 */
+//Realizar una función declarada que calcule el área de un triangulo. La función debe retornar el resultado
 
+function area( a, b ){
+  const area = (a * b)/ 2;
+  return `El área del triangulo es ${area} metros cuadrados`;
+}
+console.log(area(3, 5));
+
+console.log(`El área del triángulo es: ${area2(5, 10)}`);
+function area2(a, b) {
+  return (a * b) / 2;
+}
+
+//Realizar una función expresada que calcule el area de un triángulo
+const calculoArea = function(a, b){
+  return (a * b) / 2;
+};
+console.log(calculoArea(3,5));
+
+const calculoAreaTriangulo = function(a, b){
+  return (a * b) / 2;
+};
+console.log(`El área del triángulo es: ${calculoAreaTriangulo(3,5)}`);
+
+const calculaArea2 = function (base, altura) {
+  return (base*altura)/2;
+}
+console.log(calculaArea2(12, 20));
+
+
+// Realizar una función flecha que calcule el área de un triángulo
+const calculaArea3 = ( base, altura) => base * altura / 2;
+console.log(`Resultado usando arrow function: ${calculaArea3(12,20)}`)
+
+
+// ¿Qué sucede si uso console.log como retorno?
+const imprimirArea = (base, altura) => console.log(calculaArea3(base, altura));
+imprimirArea(12, 20);
+
+// Realizar una función flecha que calcule el área de un círculo
+// Área = pi * radio^2
+// Usar una función flecha para imprimir el resultado en un párrafo id="area-circulo"
+/*function calculaAreaCirculo(radio) => Math.PI * radio**2;
+console.log(`Resultado usando arrow function: ${calculaAreaCirculo(3)}`)*/
+
+// Función flecha que calcula el área de un círculo
+const calculaAreaCirculo = radio => Math.PI * (radio ** 2);
+console.log(`Resultado área circulo: ${calculaAreaCirculo(3)} m²`);
+
+
+  // Función flecha que calcula el área y actualiza el párrafo
+  const AreaCirculo = (radio) => {
+    const area = Math.PI * (radio ** 2);
+    document.getElementById("area-circulo").textContent = `El área del círculo es ${area.toFixed(2)} m²`;
+  };
+  AreaCirculo(6);
+
+// Otra opciones
+  const circleArea = (radio) => Math.PI * radio ** 2;
+  const imprimirAreaCirculo = (radio) => document.getElementById("area-circulo").innerText = circleArea(radio);
+  imprimirAreaCirculo(5);
 
 
 
@@ -166,7 +230,10 @@ Inicializa un parámetro de la función, si no se envía el argumento cuando se 
 
 */
 
+const saludarPersona = (nombre = "persona invitada") => console.log(`Hola ${nombre}, ya nos vamos a descansar`)
 
+saludarPersona(); //Hola undifined, ya nos vamos.. 
+saludarPersona("Mich"); // Hola Mich, ...
 
 
 
