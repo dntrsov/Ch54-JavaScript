@@ -314,4 +314,21 @@ sumarEImprimir(50,50, "parrafo");
   const resultado = sumarDosNumeros(a, b);
   const mensaje = `La suma de ${a} + ${b} es: ${resultado}`;
 
-}*/S
+}*/
+
+const sumarEImprimir = ( a, b , imprimir = console.log) => {
+   const resultado = sumarNumeros(a, b);
+   const mensaje = `La suma de ${a} + ${b} es: ${resultado}`;
+   imprimir(mensaje)
+}
+sumarEImprimir( 10, 14); // se imprimr en consola 
+function imprimirEnDOMParagraph(mensaje) {
+  const refParagraph = document.getElementById("resultado-sumatoria");
+  refParagraph.innerText = mensaje;
+}
+const imprimirEnDOMH2 = (mensaje) =>{
+  const refParagraph = document.getElementById("resultadoh2-sumatoria");
+  refParagraph.innerText = mensaje;
+}
+sumarEImprimir( 10, 14, imprimirEnDOMParagraph); // se imprime en paragraph
+sumarEImprimir( 10, 14, imprimirEnDOMH2); // se imprime en h2
