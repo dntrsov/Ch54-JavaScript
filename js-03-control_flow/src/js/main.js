@@ -41,7 +41,82 @@
     else condición;   
 
 */
+/* 
+ Crear un arrow function que reciba el valor de edad.
+ Si la edad es mayor o igual a 18, la función debe
+ retornar el mensaje "Eres mayor de edad".
+ En caso contrario, retornar el mensaje "Eres menor de edad".
+ - Realizar la versión de if-else sin usar el bloque de código {}
+*/
+const edad = 18;
 
+if (edad >= 18) {
+  console.log("Eres mayor de edad");
+} else {
+  console.log("Eres menor de edad.");
+}
+
+
+if (edad >= 18) console.log("Eres mayor de edad"); //if ( condición ) sentencia;
+else console.log("Eres menor de edad"); //else sentencia_si_condición_es_falsa;
+
+const verificarEdad = edad => 
+    edad >= 18 ? "Eres mayor de edad" : "Eres menor de edad";
+console.log(verificarEdad(20)); // "Eres mayor de edad"
+console.log(verificarEdad(15)); // "Eres menor de edad"
+
+
+/*const verificaEdad = edad => {
+    if (edad >= 18) return "Eres mayor de edad";
+    else return "Eres menor de edad";
+};
+console.log(verificaEdad(17)); // "Eres mayor de edad"
+console.log(verificaEdad(15)); // "Eres menor de edad"*/
+
+// Ejemplo Oswaldo
+const verificaEdad = edad => {
+    if (edad >= 18) return "Eres mayor de edad";
+    else return "Eres menor de edad";
+}
+const resultado = verificaEdad(8);
+console.log(resultado);
+
+/*
+ Crear un arrow function que reciba el valor de edad.
+ Si la edad es mayor o igual a 18 y menor o igual a 30
+                 ( evalur con 18 Y(&&) evaluar con 30        )
+ la función debe retornar el mensaje "Tu luchador es Místico".
+ Si es mayor o igual a 31 el mensaje "Tu luchador es el perro Aguayo".
+ Si es menor a 18 el mensaje "Tu luchador es Penta"
+*/
+/*const mensajeEdad = edadPersona => {
+    if ( edadPersona >= 18 && edadPersona <= 30 ) return "Tus luchadores son Mistico o Vampiro Canadiense";
+    else if ( edadPersona >= 31 ) return "Tus luchadores eran el Perro Aguayo o el Gran Apache";
+    else if ( edadPersona < 18 ) return "Tus luchadores son Penta el 0M Zero miedo o Pagano 656";
+ } */
+
+/*const resultadoEvaluarEdad = mensajeEdad(10);
+console.log(resultadoEvaluarEdad);*/
+
+const mensajeEdad = edadPersona => {
+    if (edadPersona >= 18 && edadPersona <= 30)
+        return "Tus luchadores son Mistico o Vampiro Canadiense";
+    else if (edadPersona >= 31)
+        return "Tus luchadores eran el Perro Aguayo o el Gran Apache";
+    else
+        return "Tus luchadores son Penta el 0M Zero miedo o Pagano 656";
+};
+
+console.log(mensajeEdad(10));  // "Tus luchadores son Penta el 0M Zero miedo o Pagano 656"
+console.log(mensajeEdad(20));  // "Tus luchadores son Mistico o Vampiro Canadiense"
+console.log(mensajeEdad(31));  // "Tus luchadores eran el Perro Aguayo o el Gran Apache"
+
+
+
+
+
+
+    
 
 
 
