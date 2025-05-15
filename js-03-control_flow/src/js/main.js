@@ -112,11 +112,44 @@ console.log(mensajeEdad(20));  // "Tus luchadores son Mistico o Vampiro Canadien
 console.log(mensajeEdad(31));  // "Tus luchadores eran el Perro Aguayo o el Gran Apache"
 
 
-
-
-
-
+//BLoque de codigo
     
+{
+    let myVarLet = 30;
+    const myVarConst = 40;
+    var myVarVar = 50;
+    console.log(myVarLet, myVarConst, myVarVar); // 30, 40, 50
+    {
+
+    let myVarLet = 100;
+    const myVarConst = 110;
+    var myVarVar = 120;
+    console.log(myVarLet, myVarConst, myVarVar); // 100, 110, 120
+    }
+    console.log(myVarLet, myVarConst, myVarVar); //30, 40, 120
+}
+
+// Ejercicios mentales
+let active = false
+if( active == true);{ // este ; esta termiando con el ; se muere la sentencia if. 
+    console.log("Estás activo") //bajo tipadao
+}
+console.log("Fin del programa"); //Te imprime los dos. 
+
+// Ejericio mental 2 
+active = false;
+if( active === true)
+    console.log("Está activo");
+console.log("Tiene autorización");
+
+console.log("Fin del programa");
+
+// Ejericio mental 3 
+/*active = false;
+if( active); console.log("Está activo");
+else console.log("No estás activo"); // error de sintaxis, el else no tiene un if.
+console.log("Fin del programa");*/
+
 
 
 
@@ -148,8 +181,49 @@ console.log(mensajeEdad(31));  // "Tus luchadores eran el Perro Aguayo o el Gran
 
 */
 
+/*const evaluarNombre = (nombre) =>{
+        switch(nombre){
+            case "Lua":
+                console.log("Es de Abril");
+                break;
+            default:
+                console.log("No sé sabe de quéin es")
+        }
+}
+evaluarNombre ("Lua"); */
+
+const evaluarNombre = ( nombre ) => {
+    let resultado;
+    switch ( nombre){
+        case "Lua":
+            resultado = "Es de Abril";
+            break;
+        case "Borrego":
+        case "Besito":
+        case "Frijol":
+        case "Paco":
+            resultado = "Es de Yessica";
+            break;
+        case "Milo":
+            resultado = "Es de Carlos";
+            break; 
+            case "Cuchara":
+            resultado = "Es de Ricardo";
+            break;
+        default:
+            resultado ="No se sabe de quién es";
+        
+    }
+    return resultado;
+}
+console.log( evaluarNombre("Lua") ); // Es de Abril
+console.log( evaluarNombre("Milo")); //No se´sabe de quién es porque no hay break 
+console.log( evaluarNombre("Cuchara"));
+console.log( evaluarNombre());
+console.log( evaluarNombre("Paco"));
 
 
+const nombreMascota = "Lua";
 
 /**
  * Función que reciba la velocidad de un ventilador y devuelva el mensaje
@@ -164,6 +238,60 @@ console.log(mensajeEdad(31));  // "Tus luchadores eran el Perro Aguayo o el Gran
  */
 
 
+const velocidadVentilador = ( velocidad ) => {
+    let resultadoVelocidad; // ¿Que es esto?
+    switch ( velocidad){
+        case 0:
+            resultadoVelocidad = "Apagado";
+            break;
+        case 1:
+            resultadoVelocidad = "velocidad Baja";
+            break;
+        case 2:
+            resultadoVelocidad = "velocidad Media";
+            break; 
+        case 3:
+            resultadoVelocidad = "velocidad Alta";
+            break;
+        default:
+            resultadoVelocidad ="Velocidad desconocida";
+        
+    }
+    return resultadoVelocidad;
+}
+console.log( velocidadVentilador(0)); 
+console.log( velocidadVentilador(1));
+console.log( velocidadVentilador(2));
+console.log( velocidadVentilador(3));
+console.log( velocidadVentilador(5));
+
+
+/* Realizar dos versiones, una versión con switch y otra con if-else
+ */
+
+
+const numeroVelocidad = ventiladorNumero => {
+    if (ventiladorNumero === 0)
+        resultadoVelocidadVentilador = "Apagado segunda versión";
+    else if (ventiladorNumero === 1)
+        resultadoVelocidadVentilador =  "Velocidad Baja segunda versión";
+    else if (ventiladorNumero === 2)
+        resultadoVelocidadVentilador =  "Velocidad Media segunda versión";
+    else if (ventiladorNumero === 3)
+        resultadoVelocidadVentilador =  "Velocidad Alta segunda versión";
+    else
+        resultadoVelocidadVentilador =  "Velocidad Desconocida segunda versión";
+
+        return resultadoVelocidadVentilador;
+};
+
+console.log(numeroVelocidad(0));
+console.log(numeroVelocidad(1));
+console.log(numeroVelocidad(2));
+console.log(numeroVelocidad(3));
+console.log(numeroVelocidad(5));
+
+//Cuando tenemos bastantes return se vuelve complicado
 
 
 // ------------------------ Operador ternario --------------------------
