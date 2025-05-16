@@ -150,6 +150,15 @@ for (let i = 1; i <= 7; i++ ){
 
 }
 
+let myIteration; // undefined
+for (myIteration = 0; myIteration <= 5; myIteration++) {
+    console.log("For loop", myIteration ); //  0...5    
+}
+console.log("Final", myIteration); // 6
+
+
+
+
 
 
 
@@ -190,3 +199,14 @@ for (let i = 0 ; i <= 5; i++ ){
 */
 
 
+
+
+/*
+ Pregunta al usuario si quire que se genere su númer de la suerte.
+ Si la respuesta es "si", genera de forma aleatoria un número.
+ En cas contrario, despedirse.
+*/ 
+while(  confirm("¿Quieres tu número de la suerte")  ){
+    const numeroSuerte = Math.random();
+    console.log("Tu número de la suerte es: " + numeroSuerte);
+}
