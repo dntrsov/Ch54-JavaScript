@@ -425,7 +425,7 @@ console.log(evaluarElNumeroSwitch(45) ); // Positivo
 console.log(evaluarElNumeroSwitch(100) ); // Grande
 
 
-3 + "bob";
+
 
 
 
