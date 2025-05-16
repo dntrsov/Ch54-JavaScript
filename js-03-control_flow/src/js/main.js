@@ -305,6 +305,23 @@ console.log(numeroVelocidad(5));
 */
 
 
+const verficarPagoDeTarjeta = ( estaPagado ) =>{
+    let msj;
+    if( estaPagado) {
+        msj = "La tarjta ha sido pagada";
+    } else {
+        msj = "La tarjeta no ha sido pagada";
+    }
+    return msj;
+}
+console.log( verficarPagoDeTarjeta( true ) );
+console.log( verficarPagoDeTarjeta( false ) );
+
+
+
+
+
+
 
 
 /**
@@ -314,6 +331,106 @@ console.log(numeroVelocidad(5));
  *  @param {number} edad
  *  @returns {string} mensaje
  */
+
+/*
+ Dado un número entero, imprimir:
+ "Negativo":  si el número es menor a 0.
+ "Cero":  si el número es  0.
+ "Positivo":  si el número es mayor a cero pero menor a 100.
+ "Grande": si el número es mayor o igual a 100.
+ - Realizar una función que reciba el número y retorne el mensaje.
+ - El retorno debe ser impreso en la consola.
+ - Realizar una versión if-else, switch y operador ternario.
+*/
+
+
+/*const verficarNumero = ( numeroPositivoNegativo ) =>{
+    let positivoNegativo;
+    if( numeroPositivoNegativo < 0) {
+        positivoNegativo = "Negativo";
+    else if (numeroPositivoNegativo === 0)
+       positivoNegativo = "Cero";
+    else if (numeroPositivoNegativo > 0 && numeroPositivoNegativo < 100 )
+       positivoNegativo = "Positivo";
+    else  (numeroPositivoNegativo >= 100)
+        positivoNegativo =  "Grande";
+
+    return positivoNegativo;
+}
+console.log( verficarNumero(-5) );
+console.log( verficarNumero( 0) );
+console.log( verficarNumero( 99) );
+console.log( verficarNumero( 101) ); */
+
+const verificarNumero = (numeroPositivoNegativo) => {
+    let positivoNegativo;
+    if (numeroPositivoNegativo < 0) {
+        positivoNegativo = "Negativo";
+    } else if (numeroPositivoNegativo === 0) {
+        positivoNegativo = "Cero";
+    } else if (numeroPositivoNegativo > 0 && numeroPositivoNegativo < 100) {
+        positivoNegativo = "Positivo";
+    } else { // número mayor o igual a 100
+        positivoNegativo = "Grande";
+    }
+
+    return positivoNegativo;
+}
+
+console.log(verificarNumero(-5));   // "Negativo"
+console.log(verificarNumero(0));    // "Cero"
+console.log(verificarNumero(99));   // "Positivo"
+console.log(verificarNumero(101));  // "Grande"
+
+// Ternario
+function verificarNumeroTernario(numero) {
+    return (numero < 0) ? "Negativo" :
+           (numero === 0) ? "Cero" :
+           (numero > 0 && numero < 100) ? "Positivo" :
+           "Grande";
+}
+
+console.log(verificarNumeroTernario(-5));
+console.log(verificarNumeroTernario(0));
+console.log(verificarNumeroTernario(50));
+console.log(verificarNumeroTernario(150));
+
+
+//Switch
+// ----- Function Switch ----------
+function evaluarElNumeroSwitch(numeroSwitch) {
+
+    switch ( true ) {
+        case (numeroSwitch < 0):
+            mensaje1 = "Negativo";
+            break;
+        case (numeroSwitch === 0):
+            mensaje1 = "Cero";
+            break;
+        case (numeroSwitch >0 && numeroSwitch < 100):
+            mensaje1 = "Positivo";
+            break;
+        case (numeroSwitch >= 100):
+            mensaje1 = "Grande";
+            break;
+        default:
+            mensaje1 = "Numero desconocido";
+    }
+    return mensaje1;
+};
+
+console.log(evaluarElNumeroSwitch(-45) ); // Negativo
+console.log(evaluarElNumeroSwitch(0) ); // Cero
+console.log(evaluarElNumeroSwitch(45) ); // Positivo
+console.log(evaluarElNumeroSwitch(100) ); // Grande
+
+
+3 + "bob";
+
+
+
+
+
 
 
 
