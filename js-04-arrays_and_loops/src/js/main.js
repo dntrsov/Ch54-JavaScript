@@ -210,3 +210,29 @@ while(  confirm("¿Quieres tu número de la suerte")  ){
     const numeroSuerte = Math.random();
     console.log("Tu número de la suerte es: " + numeroSuerte);
 }
+
+/* Uso MAth.random ();
+Gnerar 5 números aleatorios. Los números deben estar entre 0.0 y 10.0 (sin incluir el 10.)*/
+
+const generarNumerosAleatorios = (cantidad) => {
+   
+    for (let i = 0; i < cantidad; i++) {
+        const numeroAleatorio = Math.random() * 10;
+        console.log("Número aleatorio: ", numeroAleatorio); // 0.0...10.0
+    }
+    return numerosAleatorios;
+};
+generarNumerosAleatorios(5);
+
+
+
+const generarNumerosAleatorios2 = (cantidad) => {
+   
+    for (let i = 0; i < cantidad; i++) {
+        const numeroAleatorio = Math.random() * 10;
+        console.log("Número aleatorio: ", numeroAleatorio); // 0.0...10.0
+    }
+    return numerosAleatorios;
+};
+generarNumerosAleatorios2(5);
+
