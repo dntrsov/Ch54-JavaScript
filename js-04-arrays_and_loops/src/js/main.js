@@ -54,6 +54,72 @@ for ( const color of colores ) {
 const cantantes = ["Juan Gabriel", "José José", "Rocío Dúrcal", "Ana Gabriel"];
 const refListaCantantes = document.getElementById("cantantes-lista");
 
+// Imprimir en conslaa cada uno de los elementos de los cantantes, usando for of
+
+for (let i = 0; i < cantantes.length; i++) {
+    const elementos = cantantes[i];
+    console.log(elementos);    
+}
+
+for ( const cantantesLista of cantantes ) {
+    console.log( cantantesLista );
+}
+
+/* // Imprimir en consola cada uno de los cantantes, usandor for of
+const imprimirCantantes = ( listaCantantes ) => {
+    for (const cantante of listaCantantes) {
+        console.log(cantante);
+    }
+}
+imprimirCantantes(cantantes);*/
+
+// Imprimir en consola cada uno de los cantantes, usandor for of
+
+    const imprimirCantantes2 = ( listaCantantes ) => {
+    let cantantesConcatenados = "";
+    for (const cantante of listaCantantes) {
+        // cantantesConcatenados = cantantesConcatenados + cantante + " - ";
+        cantantesConcatenados +=  cantante + " - ";
+    }
+    return cantantesConcatenados;
+}
+console.log(imprimirCantantes2(cantantes));
+
+
+/**
+ *  Del siguiente arreglo de cantantes, mostrar en el DOM, el listado como unorder list.
+ *  const cantantes = ["Juan Gabriel", "José José", "Rocío Dúrcal", "Ana Gabriel"];
+ *  - Usar for of
+ *  - De preferencia usar una función 
+ *    <li>Juan Gabriel</li>
+ */
+function mostrarCantantes(lista) {
+      const ul = document.getElementById("lista-cantantes");
+
+      for (const cantante of lista) {
+        const li = document.createElement("li");
+        li.textContent = cantante;
+        ul.appendChild(li);
+      }
+    }
+
+    mostrarCantantes(cantantes);
+
+    // Ejemplo Lalo
+    const unorderListCantantes = arregloCantantes => { 
+    let concatenacion =" ";
+        for (const cantante of arregloCantantes) {
+            concatenacion += "<li>" + cantante + "</li>";
+}
+return concatenacion;
+}
+const imprimirDocumento = (arregloFinal) => document.getElementById("cantantes-lista").innerHTML = unorderListCantantes(arregloFinal);
+imprimirDocumento(cantantes);
+
+
+
+
+
 
 
 // ------------------- Uso de break en ciclos ----------------------------
@@ -68,6 +134,10 @@ for ( ;   ;  ){
         break;
     }
 }
+
+
+
+
 
 // ------------------- Uso de break y label en ciclos anidados ----------------------------
 multiplicando:
