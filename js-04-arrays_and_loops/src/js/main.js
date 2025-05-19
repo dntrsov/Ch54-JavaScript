@@ -220,7 +220,7 @@ const generarNumerosAleatorios = (cantidad) => {
         const numeroAleatorio = Math.random() * 10;
         console.log("Número aleatorio: ", numeroAleatorio); // 0.0...10.0
     }
-    return numerosAleatorios;
+    
 };
 generarNumerosAleatorios(5);
 
@@ -232,7 +232,110 @@ const generarNumerosAleatorios2 = (cantidad) => {
         const numeroAleatorio = Math.random() * 10;
         console.log("Número aleatorio: ", numeroAleatorio); // 0.0...10.0
     }
-    return numerosAleatorios;
+    
 };
 generarNumerosAleatorios2(5);
+
+const generarNumerosA = (cantidad, minNum = 0, maxNum = 10) => {
+    for (let i =0; i < cantidad; i++){
+        const numeroAleatorio = Math.random();
+        const escalaNumero = numeroAleatorio *((maxNum - minNum) +1);
+        const numeroEntero = Math.floor(escalaNumero + minNum);
+        console.log("Número aleatorio:", numeroEntero);
+
+    }
+};
+generarNumerosAleatorios2(5);
+generarNumerosAleatorios2(10, 50 , 60);
+
+
+
+
+const generarNumerosAleatorios3 = (cantidad, minNum = 0, maxNum = 10) => {
+   
+    for (let i = 0; i < cantidad; i++) {
+        const numeroAleatorio = Math.random(); 
+        const escalarNumero = numeroAleatorio * ( (maxNum - minNum ) + 1); 
+        const numerosEntero = Math.floor(escalarNumero + minNum); 
+        console.log("Número aleatorio: ", numerosEntero); 
+    }
+   
+};
+generarNumerosAleatorios3(5);
+generarNumerosAleatorios3(10, 50 , 60);
+/*const generarNumerosAleatorios2 = (cantidad, minNum = 0, maxNum = 10) => {
+   
+    for (let i = 0; i < cantidad; i++) {
+        const numeroAleatorio = Math.random(); 
+        const escalarNumero = numeroAleatorio * ( (maxNum - minNum ) + 1); 
+        const numerosEntero = Math.floor(escalarNumero + minNum); 
+        console.log("Número aleatorio: ", numerosEntero); 
+    }
+   
+};
+generarNumerosAleatorios2(5);
+generarNumerosAleatorios2(10, 50 , 60);*/
+
+
+/*
+Melate Chocolate CH54
+1. Al pulsar el boton generar "mis números de la suerte"
+1. Generar 6 números entre el 1 y el 54.
+2. Mostrar el resultado en el DOM.
+
+*/
+
+
+
+const generarNumeroAletorio =(minNum, maxNum) => {
+    const numeroAleatorio =Math.random();
+    const escalaNumero = numeroAleatorio *((maxNum - minNum) +1);
+    const numeroEntero = Math.floor(escalaNumero + minNum);
+    return numeroEntero;
+};
+const elNumeroExisteEnArreglo = (areglo, numero) =>{
+    for(const elemento of arreglo){
+        if(elemento === numero) return true
+    }
+    return false;
+}
+ 
+/*const generarNumerosDeLaSuerte = (size =6, minNum = 1, maxNum = 54) => {
+    const numeros = [];
+    while( numeros.length < size ){
+        const numeroAleatorio = generarNumeroAletorio(minNum, maxNum);
+        if (elNumeroExisteEnArreglo(numeros, numeroAleatorio) === false){
+ numeros.push(numAleatorio);
+        } 
+       
+
+        
+    }
+    imprimirMelateChocolate =(numeros) => {
+        const referencia = generarNumeroAletorio(minNum, maxNum);
+
+    }
+
+}*/
+
+const imprimirMelateChocolate = ( numeros ) => {
+    const referencia = document.getElementById("melate-chocolate");
+    referencia.innerHTML = ` ${numeros.join(' - ')} `;
+}
+const generarNumerosDeLaSuerte = (size = 6, minNum = 1, maxNum = 54) => {
+    const numeros = [];
+    while( numeros.length < size ){
+        const numAleatorio = generarNumeroAleatorio(minNum, maxNum);
+        if( elNumeroExisteEnArreglo(numeros, numAleatorio) === false ){
+            numeros.push(numAleatorio);
+        }
+    }
+    imprimirMelateChocolate( numeros);
+    
+}
+
+document.getElementById("boton-generar").addEventListener("click", () => {
+    generarNumerosDeLaSuerte();
+  });  //Debe funcionar el boton 
+
 
