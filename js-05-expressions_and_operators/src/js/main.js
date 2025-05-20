@@ -77,11 +77,11 @@ console.log(  "tree" >= 3 ); //
   - null y undefined NO son convertidos a cero
 
 */
-console.log(  3 == 3 );  // 
-console.log(  3 == "3" ); // 
-console.log(  3 === "3" ); // 
-console.log(  3 !== "3" ); // 
-console.log(  3 != "3" );  // 
+console.log(  3 == 3 );  // True
+console.log(  3 == "3" ); // True
+console.log(  3 === "3" ); // False
+console.log(  3 !== "3" ); // True
+console.log(  3 != "3" );  // False
 
 // Si un operando es null y el otro undefined, devuelve verdadero(true).
 console.log( null == undefined ); // true
@@ -97,13 +97,13 @@ console.log( obj1 == obj3 ); //
 
 //--- Si los operandos son de diferente tipos, intenta convertirlos al mismo tipo antes de comparar:-----
 // Al comparar un número con una cadena, convierte la cadena en un valor numérico.
-console.log(  3 == "3" ); // 
+console.log(  3 == "3" ); //  true
 
 
 // Si uno de los operandos es booleano, convierte el operando booleano en 
 // 1 si es verdadero y en 0 en el caso de falso.
-console.log(  1 == true ); // 
-console.log(  0 == false ); // 
+console.log(  1 == true ); // 1 true
+console.log(  0 == false ); // 0 true
 
 //--- Si los operandos tienen el mismo tipo, se comparan de la siguiente manera:-----
 // String: devuelve verdadero solo si ambos operandos tienen los mismos caracteres y en el mismo orden.
@@ -123,12 +123,27 @@ console.log("a".localeCompare("A", "en", { sensitivity: "base" })); //
 // +0 y -0 se tratan como el mismo valor. 
 // Si alguno de los operandos es NaN, devuelve falso.
 console.log(  +0 == -0 ); // 
-console.log(  NaN == NaN ); // 
+console.log(  NaN == NaN ); // false
 console.log(  1 == 1 ); // 
 console.log(  1 == 1.0 ); // 
 console.log(  1 == 1.1 ); // 
 
 console.log(  isNaN("hola" / 3 )  ); // 
+
+
+
+
+/*
+  Uso del caracter de escape:
+  \n  nueva línea
+  \t  tabulación
+  \\  barra invertida
+  \'  comilla simple
+  \"  comilla doble
+  \`   comilla invertida
+  \b  retroceso
+  \uXXXX  unicode   \u00A9 = ©
+*/
 
 
 // ------- Operadores de asignación ----------------
@@ -158,6 +173,9 @@ valorA *= 2;
 let mensaje = "Me voy a de vacaciones";
 mensaje += 2; 
 
+for(let i=1; i <=10; i+=2){
+  console.log(i);
+}
 
 
 // -------------- Operadores unarios ------------------
@@ -176,8 +194,8 @@ console.log( 5 + intereses ); //
 console.log( 5 + parseInt(intereses) ); // 
 
 let pagoFinal = 0;
-console.log( pagoFinal += 5 + + "3" ); // 
-console.log( pagoFinal += 5 + parseFloat ("3") ); // 
+console.log( pagoFinal += 5 + + "3" ); // 8
+console.log( pagoFinal += 5 + parseFloat ("3") ); // 16
 
 
 // Operador de incremento y decremento en unidad.
@@ -194,23 +212,23 @@ console.log( pagoFinal += 5 + parseFloat ("3") ); //
 
 let number = 10;
 ++ number; // number = number + 1
-console.log( number ); // 
+console.log( number ); // 11
 number ++; // number; number = number + 1; 
-console.log( number ); // 
+console.log( number ); // 12
 
 // Uso de post-incremento
 number = 20;
-console.log( number ); // 
-console.log( number = number + 1 ); //
+console.log( number ); // 20
+console.log( number = number + 1 ); // 21
 // valor++
 number = 20;
-console.log( number++ ); // 
-console.log( number ); // 
+console.log( number++ ); // 20
+console.log( number ); // 21
 
 // Uso de pre-incremento
 number = 40;
-console.log( number = number + 1 ); // 
-console.log( number ); // 
+console.log( number = number + 1 ); // 41
+console.log( number ); // 41
 
 // ++valor
 number = 40;
@@ -226,7 +244,7 @@ console.log( kati + ++number  ); //
 let x = 3;
 let y = x++; // y:3   x:4
 
-console.log(`x :${ x++ } y:${ ++y }`); // 
+console.log(`x :${ x++ } y:${ ++y }`); // x+1 y+1 = 4.5
                                        // 
 console.log(`x :${ x } y:${ y }`); // 
 
@@ -249,6 +267,13 @@ for(    ; a < 3 ; b = ++a){ //
 }
 console.log( a , b ); //
 
+
+
+const numeros =[2,4,5,67,8];
+let indice = 0;
+while(indice < numeros. length){
+  console.log("Número:", numeros[indice ++]);
+}
 
 // ---------------- Operadores lógicos && y || ---------------
 /*
