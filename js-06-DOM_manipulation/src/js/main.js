@@ -39,6 +39,22 @@ const changeElementById = () =>{
     descripcionOperadores.innerHTML = '<span class="text-warning">document</span>: representa cualquier página web carga en el navegador.';
 }
 
+const cambiaElemntos = ( name ) => {
+    const descripcionOperadores = document.getElementById("insertar-tarjeta-mi-nombre");
+    console.log(descripcionOperadores);
+    descripcionOperadores.innerHTML = 
+        `<div class="card" style="width: 18rem;">
+        <img src = "https://www.anmosugoi.com/wp-content/uploads/2023/08/Jujutsu-kaisen-gojo-geto.webp">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text">Gojo y Geto:"Somos los más fuertes" (...) Mi unico mejor amigo</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+</div > `;
+}
+cambiaElemntos("Diana");
+
+
 changeElementById();
 
 /**
@@ -54,11 +70,30 @@ const changeElementsByTagName =  () => {
 
 }
 
-// changeElementsByTagName();
 
-/**
+const contarBotones = () => {
+  const botones = document.querySelectorAll('button');
+  console.log('Número total de botones en la página:', botones.length);
+};
+
+
+function contarBotones1() {
+  const botones = document.querySelectorAll('button');
+  console.log('Total de botones en la página:', botones.length);
+}
+contarBotones1();
+
+// changeElementsByTagName();
+/* Realizar una funcion que lea todos los botnoes de la página y muestre el consla el numero total de botones
+
+
+
+// Ejecutar la función
+contarBotones();
+
+
  * Acceder a un elemento usando el selector universar
- */
+
 const getElementsByQuerySelector = () =>{
                   // document.getElementById("descripcion-operadores");
     const element = document.querySelector("#descripcion-operadores");

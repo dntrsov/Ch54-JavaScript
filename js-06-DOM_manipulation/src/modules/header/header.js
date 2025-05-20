@@ -13,6 +13,9 @@ const insertHeader = ()=>{
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
+           <li class="nav-item">
+              <a class="nav-link active" href="/src/pages/mi-playera/mi-playera.html">Mi playera favorita </a>
+            </li>
             <li class="nav-item">
               <a class="nav-link active" href="/index.html">Inicio</a>
             </li>
@@ -22,6 +25,7 @@ const insertHeader = ()=>{
             <li class="nav-item">
               <a class="nav-link" href="/src/pages/contact/contact.html">Contáctanos</a>
             </li>
+           
         </div>
       </div>
     </nav>
