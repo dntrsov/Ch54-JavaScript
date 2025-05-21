@@ -106,8 +106,66 @@ insertMainFooter ( document.getElementById("footer"));
     localStorage.clear() → Borra todo el almacenamiento.
 
 */
+/*
+ Crear en el HTML un input y un botón para guardar el valor en el localStorage.
+  
+  Al cargar la página, si hay un valor guardado, mostrarlo en el titulo H1 "Hola, {nombre}".
+  En caso contrario, mostrar "Hola, persona invitada".
+*/
 
 
+    // Función para mostrar el saludo según lo guardado en localStorage
+    /*function mostrarSaludo() {
+      const nombre = localStorage.getItem("nombre");
+
+      const saludo = document.getElementById("saludo");
+      if (nombre) {
+        saludo.textContent = `Hola, ${nombre}`;
+      } else {
+        saludo.textContent = "Hola, invitado";
+      }
+    }
+
+    // Guardar el nombre al hacer clic en el botón
+    document.getElementById("guardarBtn").addEventListener("click", function() {
+      const nombre = document.getElementById("nombreInput").value.trim();
+
+      if (nombre !== "") {
+        localStorage.setItem("nombre", nombre);
+        mostrarSaludo(); // Actualizar el saludo en pantalla
+      }
+    });
+
+    // Al cargar la página, mostrar el saludo correcto
+    window.onload = mostrarSaludo;*/
+
+
+    const nombreInput = document.getElementById('nombreInput');
+const boton = document.getElementById('btnGuardar');
+const saludoH1 = document.getElementById('saludo');
+
+const nombreGuardado = localStorage.getItem('nombre');
+if (nombreGuardado) {
+  saludoH1.textContent = `Hola, ${nombreGuardado}`;
+} else {
+  saludoH1.textContent = 'Hola, persona invitada';
+}
+boton.addEventListener('click', () => {
+  const nombre = nombreInput.value;
+  if (nombre) {
+    saludoH1.textContent = `Hola, ${nombre}`;
+    localStorage.setItem('nombre', nombre); 
+  } else {
+    saludoH1.textContent = 'Hola, persona invitada';
+    localStorage.removeItem('nombre'); 
+  }
+  nombreInput.value = '';
+});
+
+
+  
+
+      
 
 
 /*
