@@ -79,6 +79,13 @@ Características clave de los módulos JS:
 
 // importa las funciones del footer y header e invócalos para que se ejecuten
 
+import {insertMainFooter} from "../modules/footer/footer.js";
+import { insertMainHeader } from "../modules/header/header.js";
+
+insertMainHeader( document.getElementById("header"));
+insertMainFooter ( document.getElementById("footer"));
+
+
 
 
 /*
