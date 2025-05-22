@@ -140,7 +140,7 @@ insertMainFooter ( document.getElementById("footer"));
     window.onload = mostrarSaludo;*/
 
 
-    const nombreInput = document.getElementById('nombreInput');
+   /*const nombreInput = document.getElementById('nombreInput');
 const boton = document.getElementById('btnGuardar');
 const saludoH1 = document.getElementById('saludo');
 
@@ -160,8 +160,27 @@ boton.addEventListener('click', () => {
     localStorage.removeItem('nombre'); 
   }
   nombreInput.value = '';
-});
+});*/
 
+// NO lo debemos hacer
+//window.aLlamadaBotonGuardar = manejoDelBotonGuardar;
+
+
+/**
+ *  ¿Qué es addEventListener?
+ *  Es un método que permite escuchar eventos (como click, keydown, submit, etc.) en un elemento 
+ *  del DOM, y ejecutar una función cuando ese evento ocurre.
+ * 
+ * */
+//const refSaveButton = document.getElementById("btnGuardar");
+//refSaveButton.addEventListener( "click", manejoDelBotonGuardar  );
+
+
+
+/*const refNameInput = documento.getElementById("nombreInput");
+refNameInput.addEventListener( "keydown" , ( event )=>{
+  console.log(event.key);
+});*/
 
   
 
@@ -192,11 +211,11 @@ const tercerPaso = () => {
   console.log("03 - Fin de mi programa");
 };
 
-/*
+
 primerPaso();
 segundoPaso(); // Este proceso demora tiempo
 tercerPaso();
-*/
+
 
 /*
  Programación asíncrona.
@@ -215,8 +234,17 @@ tercerPaso();
    sintaxis:
      setTimeout( fncCallback, tiempo_ms, argumentos_fnc );
      setTimeout( ()=>{}  , tiempo_ms );
-
 */
+/*const saludar1 = (nombre1) => alert(`Hola ${nombre1}`);
+
+const saludarXSeg = (segundos) =>{
+  setTimeout( saludar1, segundos, "Neo");
+
+}
+
+console.log("Antes de saludar");
+saludarXSeg( 5);
+console.log("Después de saludar");*/
 
 
 
