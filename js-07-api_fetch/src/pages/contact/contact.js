@@ -33,28 +33,21 @@
 
 irPorElElote("día");*/
 
-const irPorElElote= ( horaDelDia ) =>{
-   // const miPromesa = new Promise( fncCallBack  );
 
-   const miPromesa = new Promise( ( fncCallBackResolve, fncCallBackReject )=>{
-       if( horaDelDia === "día" || horaDelDia === "tarde" ){
-          fncCallBackResolve("Toma tu elote que está dentro de una bolsa");
-       } else {
-          fncCallBackReject( {error: 404, descripcion: "Elote no fue encontrado"}  );
-       }
-       
-   } );
-   return miPromesa;
-}
+const irPorElElote = (horaDelDia) => {
+  //const miPromesa = new Promise( fncCallBack );
+  const miPromesa = new Promise((fncCallBackResolve, fncCallBackReject) => {
+    console.log("voy por el elote en la " + horaDelDia); // esta tarea puede demorar mucho o poco
+    if (horaDelDia === "día" || horaDelDia === "tarde") {
+      fncCallBackResolve("Toma tu elote que está dentro de una bolsa");
+    } else {
+      fncCallBackReject({ error: 404, descripcion: "Elote no fue encontrado" });
+    }
+  });
+  return miPromesa;
+};
 
-
-irPorElElote("noche")
-    .then( ( response )=> console.log("2aPromesa", response) )
-    .catch( ( error )=> console.log(`Promesa rechazada`, error) )
-    .finally( ()=> console.log("Se ha terminado tu promesa")  )
-
-
-    /**
+/**
  *  Realizar un función de tipo Promise que reciba lo siguiente
  *  @param{number} el número de vueltas de amarre de la bolsa
  * 
@@ -64,18 +57,43 @@ irPorElElote("noche")
  *    con el texto "ups, se me cayó tu elote"
  *  
  */
-const meComoMiElote = (numeroDeVueltasBolsa) =>{
-  const miPromesa = new Promise( ( fncCallBackResolve, fncCallBackReject )=>{
-       if( numeroDeVueltasBolsa <= 2 ){
-          fncCallBackResolve("ñomi ñomo, me como mi elote");
-       } else {
-          fncCallBackReject( {error: 404, descripcion:"upss se me cayó el elote, mas suerte pa la próxima"}  );
-       }
-       
-   } );
-   return miPromesa;
-}
 
-meComoMiElote(10);
+/*const numDeVueltas = (number) => {
+
+    const miPromesa = new Promise( (fncCallBackResolve, fncCallBackReject) =>{
+        console.log(El numero de vueltas son ${number});
+        
+        if (number <= 2) {
+            fncCallBackResolve("ñomi ñomi")
+        } else {
+            fncCallBackReject({error:404, descripcion: "ups, se me cayó tu elote"})
+        }
+    });
+    return miPromesa;
+};
+
+
+//miFuncionPromesa().then( callback ).catch( callback ).finally( callback );
+
+irPorElElote("tarde")
+    .then( ( response )=> console.log("1eraPromesa",response) );
+
+irPorElElote("noche")
+    .then( ( response )=> console.log("2daPromesa",response) )
+    .catch( ( error )=> console.log(Promesa rechazada, error) )
+    .finally( ()=> console.log("Se ha terminado tu promesa") );
+
+// Ya tengo mi elote, pero falta abrir la bolsa
+
+irPorElElote("tarde")
+    .then( ( response )=> {
+        console.log("1eraPromesa",response);
+        const vueltas = 2;
+        numDeVueltas(vueltas)
+            .then( response => console.log(response))
+            .catch( error => console.log(error));
+    })
+    .catch( ( error )=> console.log(Promesa rechazada, error) )
+    .finally( ()=> console.log("Se ha terminado tu promesa") ) */
   
 
