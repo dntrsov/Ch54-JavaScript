@@ -12,8 +12,10 @@ const leerInputsFormulario = ( formulario )=>{
          leer el resto de valores
         */
         checkbox: formulario.elements["terminos-condiciones"].checked
-    }
- 
+    };
+    console.table(newUser);
+   
     return newUser;
-}
+};
+
 export { leerInputsFormulario };
