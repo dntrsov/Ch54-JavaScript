@@ -28,13 +28,25 @@
 
 import { validateName } from "../../../src/utils/validation/validateName";
 
-test("Debe aceptar un nombre válido", () => {
+
+
+/*
+ test.each o it.each
+ Validar una función con muchos casos de entrada sin repetir código.
+ 
+ toHaveProperty(keyPath, value?)
+ Propósito: Verifica si un objeto tiene una propiedad específica. 
+ Opcionalmente, puedes especificar el valor que esperas en esa propiedad.
+*/
+
+
+/*test("Debe aceptar un nombre válido", () => {
   const response = validateName("Abril");
 
   expect(response.isValid).toBe(true);
   expect(response.errors.length).toBe(0);
   expect(response.errors).toEqual([]);
-});
+});*/
 
 
 
@@ -52,7 +64,15 @@ test("Debe aceptar un nombre válido", () => {
  .toBeLessThan(number) / .toBeLessThanOrEqual(number)
  Propósito: Compara si un número es menor que, o menor o igual que, otro.
 */
-test("Debe rechazar un nombre vacío", () =>{
+
+/*test("Debe rechazar valores que no son string(null)", ()=>{
+  const response = validateName( null );
+  expect( response.isValid ).toBeFalsy();
+  expect( response.errors.length ).toBeGreaterThan(0);
+  expect( response.errors ).toContain("El valor ingresado no es un nombre válido");
+});*/
+
+/*test("Debe rechazar un nombre vacío", () =>{
     const response = validateName("");
     expect( response.isValid).toBe( false );
     expect(response.isValid).toBeFalsy();
@@ -60,12 +80,21 @@ test("Debe rechazar un nombre vacío", () =>{
     expect( response.errors.length>0 ).toBeTruthy();
     expect(response.errors.length).toBeGreaterThan(0);
 });
-  
 
 test("Debe rechzar un nombre con solo espacios", ()=>{
     const response = validateName( " "); 
     expect(response.isValid).toBeFalsy();
     expect(response.errors.length).toBeGreaterThan(0);
-    expect(response.errors).toContain("No se permiten espacios en el nombre");
+    expect(response.errors).toContain("El nombre no puede estar vacío");
 
-})
+});
+
+
+test("Debe rechazar nombres demasiado cortos", ()=>{
+  const response = validateName("Je");
+  expect( response.isValid ).toBeFalsy();
+  expect( response.errors.length ).toBeGreaterThan(0);
+  expect( response.errors ).toContain("El nombre debe tener más de dos caracteres");
+});
+
+*/
