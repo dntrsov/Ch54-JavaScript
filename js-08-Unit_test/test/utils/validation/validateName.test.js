@@ -61,3 +61,11 @@ test("Debe rechazar un nombre vacío", () =>{
     expect(response.errors.length).toBeGreaterThan(0);
 });
   
+
+test("Debe rechzar un nombre con solo espacios", ()=>{
+    const response = validateName( " "); 
+    expect(response.isValid).toBeFalsy();
+    expect(response.errors.length).toBeGreaterThan(0);
+    expect(response.errors).toContain("No se permiten espacios en el nombre");
+
+})
